@@ -2,14 +2,16 @@
     xpositive/3,
     xnegative/3,
     xsaved/3.
+% TODO: verify whether xsaved/3 is actually necessary
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, club).
-                    
+
+% TODO: add category
 mushroom_is(unknown) :- negative(bruises, presence, visible),
                         gills(spacing, crowded),
                         stalk_root(shape, equal).
-
+% TODO: add category
 mushroom_is(unknown) :- negative(bruises, presence, visible),
                         \+gills(spacing, close),
                         \+gills(spacing, crowded).
@@ -62,6 +64,7 @@ stalk_below_ring(X, Y) :- positive(stalk_below_ring, X, Y).
 
 rings(X, Y) :- positive(rings, X, Y).
 
+% TODO: double check if positive/3 & negative/3 both work as intended
 positive(X, Y, Z) :- xpositive(X, Y, Z), !.
 positive(X, Y, Z) :- \+xsaved(X, Y, Z), 
                      \+other_match_exists(X, Y, Z), 
@@ -73,6 +76,7 @@ negative(X, Y, Z) :- \+xsaved(X, Y, Z), ask(X, Y, Z, no).
 
 other_match_exists(X, Y, Z) :- \+xsaved(X, Y, Z), xsaved(X, Y, W), xpositive(X, Y, W).
 
+% TODO: find a way to replace multiple underscores
 ask(X, Y, Z, yes) :- !, 
                      re_replace("_", " ", X, X1),
                      re_replace("_", " ", Y, Y1),
@@ -82,6 +86,7 @@ ask(X, Y, Z, yes) :- !,
                      memorize(X, Y, Z, Reply),
                      (Reply = 'y').
 
+% TODO: find a way to replace multiple underscores
 ask(X, Y, Z, no) :- !,
                     re_replace("_", " ", X, X1),
                     re_replace("_", " ", Y, Y1),
