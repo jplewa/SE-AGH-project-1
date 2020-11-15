@@ -1,8 +1,6 @@
 :- dynamic
     xpositive/3,
-    xnegative/3,
-    xsaved/3.
-% TODO: verify whether xsaved/3 is actually necessary
+    xnegative/3.
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, club).
@@ -66,15 +64,15 @@ rings(X, Y) :- positive(rings, X, Y).
 
 % TODO: double check if positive/3 & negative/3 both work as intended
 positive(X, Y, Z) :- xpositive(X, Y, Z), !.
-positive(X, Y, Z) :- \+xsaved(X, Y, Z), 
+positive(X, Y, Z) :- \+xnegative(X, Y, Z), 
                      \+other_match_exists(X, Y, Z), 
                      ask(X, Y, Z, yes).
 
 negative(X, Y, Z) :- xnegative(X, Y, Z), !.
-negative(X, Y, Z) :- \+xsaved(X, Y, Z), other_match_exists(X, Y, Z), !.
-negative(X, Y, Z) :- \+xsaved(X, Y, Z), ask(X, Y, Z, no).
+negative(X, Y, Z) :- \+xpositive(X, Y, Z), other_match_exists(X, Y, Z), !.
+negative(X, Y, Z) :- \+xpositive(X, Y, Z), ask(X, Y, Z, no).
 
-other_match_exists(X, Y, Z) :- \+xsaved(X, Y, Z), xsaved(X, Y, W), xpositive(X, Y, W).
+other_match_exists(X, Y, Z) :- xpositive(X, Y, W), Z \= W, !.
 
 % TODO: find a way to replace multiple underscores
 ask(X, Y, Z, yes) :- !, 
@@ -100,16 +98,13 @@ memorize(X, Y, Z, 'y') :- memorize(X, Y, Z, yes).
 
 memorize(X, Y, Z, 'n') :- memorize(X, Y, Z, no).
 
-memorize(X, Y, Z, yes) :- assertz(xpositive(X, Y, Z)),
-                          assertz(xsaved(X, Y, Z)).
+memorize(X, Y, Z, yes) :- assertz(xpositive(X, Y, Z)).
 
-memorize(X, Y, Z, no) :- assertz(xnegative(X, Y, Z)),
-                         assertz(xsaved(X, Y, Z)).
+memorize(X, Y, Z, no) :- assertz(xnegative(X, Y, Z)).
 
 clear_facts :- write('Press any key to exit'), nl,
                retractall(xpositive(_, _, _)),
                retractall(xnegative(_, _, _)),
-               retractall(xsaved(_, _, _)),
                get_char(_).
                     
 execute :- mushroom_is(X), !,
