@@ -291,7 +291,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        cap(color, pink),
                        \+stalk_above_ring(color, white).
 
-mushroom_is(poisonous) :- ositive(bruises, presence, visible),
+mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
                           cap(surface, smooth),
                           gills(spacing, close),
