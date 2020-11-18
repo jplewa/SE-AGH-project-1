@@ -29,19 +29,19 @@ mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, crowded),
                           stalk_root(shape, bulbous),
                           stalk_below_ring(color, white),
-                          rings(number, none).  
+                          rings(number, none).
 
 mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, crowded),
                           stalk_root(shape, bulbous),
                           stalk_below_ring(color, white),
-                          rings(number, one).  
+                          rings(number, one).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, crowded),
                        stalk_root(shape, bulbous),
                        stalk_below_ring(color, white),
-                       rings(number, two).  
+                       rings(number, two).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, close),
@@ -196,7 +196,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        cap(color, pink),
                        stalk_above_ring(color, white),
                        \+stalk_below_ring(color, white).
-            
+
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
                           cap(surface, scaly),
@@ -327,8 +327,8 @@ cap(X, Y) :- positive(cap, X, Y).
 
 % TODO: double check if positive/3 & negative/3 both work as intended
 positive(X, Y, Z) :- xpositive(X, Y, Z), !.
-positive(X, Y, Z) :- \+xnegative(X, Y, Z), 
-                     \+other_match_exists(X, Y, Z), 
+positive(X, Y, Z) :- \+xnegative(X, Y, Z),
+                     \+other_match_exists(X, Y, Z),
                      ask(X, Y, Z, yes).
 
 negative(X, Y, Z) :- xnegative(X, Y, Z), !.
@@ -337,7 +337,7 @@ negative(X, Y, Z) :- \+xpositive(X, Y, Z), ask(X, Y, Z, no).
 
 other_match_exists(X, Y, Z) :- xpositive(X, Y, W), Z \= W, !.
 
-ask(X, Y, Z, yes) :- !, 
+ask(X, Y, Z, yes) :- !,
                     re_replace("_"/g, " ", X, X1),
                     re_replace("_"/g, " ", Y, Y1),
                     re_replace("_"/g, " ", Z, Z1),
@@ -367,10 +367,10 @@ clear_facts :- write('Press any key to exit'), nl,
                retractall(xpositive(_, _, _)),
                retractall(xnegative(_, _, _)),
                get_char(_).
-                    
+
 execute :- mushroom_is(X), !,
            format('~nYour mushroom is ~w', X),
            nl, clear_facts.
-            
+
 execute :- write('No answer found'), nl,
            clear_facts.
