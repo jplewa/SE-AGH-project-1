@@ -3,7 +3,8 @@
     xnegative/3.
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
-                       stalk_root(shape, club).
+                       \+stalk_root(shape, bulbous),
+                       \+stalk_root(shape, equal).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                         gills(spacing, crowded),
@@ -114,6 +115,202 @@ mushroom_is(edible) :- negative(bruises, presence, visible),
                        stalk_root(shape, equal),
                        cap(surface, fibrous).
 
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                        stalk_root(shape, equal),
+                        rings(number, two).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, equal),
+                        \+rings(number, two).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    \+cap(surface, scaly),
+                    \+cap(surface, smooth).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    \+rings(number, one),
+                    \+rings(number, two).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, one),
+                    gills(spacing, close).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, scaly),
+                        rings(number, one),
+                        \+gills(spacing, close).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, scaly),
+                        rings(number, two),
+                        cap(shape, flat),
+                        \+cap(color, brown),
+                        \+cap(color, pink).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, brown),
+                    stalk_above_ring(color, red).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, pink),
+                    \+stalk_above_ring(color, white).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, brown),
+                    stalk_above_ring(color, white),
+                    \+stalk_below_ring(color, white).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, scaly),
+                        rings(number, two),
+                        cap(shape, flat),
+                        cap(color, brown),
+                        stalk_above_ring(color, white),
+                        stalk_below_ring(color, white).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, pink),
+                    stalk_above_ring(color, white),
+                    \+stalk_below_ring(color, white).
+            
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, scaly),
+                        rings(number, two),
+                        cap(shape, flat),
+                        cap(color, pink),
+                        stalk_above_ring(color, white),
+                        stalk_below_ring(color, white).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, scaly),
+                        rings(number, two),
+                        cap(shape, bell).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, scaly),
+                    rings(number, two),
+                    \+cap(shape, bell).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    \+gills(spacing, close).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, smooth),
+                        gills(spacing, close),
+                        \+rings(number, two).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    gills(spacing, close),
+                    rings(number, two),
+                    \+cap(shape, flat),
+                    \+cap(shape, bell).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, smooth),
+                        gills(spacing, close),
+                        rings(number, two),
+                        cap(shape, bell).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, smooth),
+                        gills(spacing, close),
+                        rings(number, two),
+                        cap(shape, flat),
+                        \+cap(color, brown),
+                        \+cap(color, pink).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    gills(spacing, close),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, brown),
+                    \+stalk_above_ring(color, white).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    gills(spacing, close),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, brown),
+                    stalk_above_ring(color, white),
+                    \+stalk_below_ring(color, white).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, smooth),
+                        gills(spacing, close),
+                        rings(number, two),
+                        cap(shape, flat),
+                        cap(color, brown),
+                        stalk_above_ring(color, white),
+                        stalk_below_ring(color, white).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    gills(spacing, close),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, pink),
+                    \+stalk_above_ring(color, white).
+
+mushroom_is(poisonous) :-   positive(bruises, presence, visible),
+                        stalk_root(shape, bulbous),
+                        cap(surface, smooth),
+                        gills(spacing, close),
+                        rings(number, two),
+                        cap(shape, flat),
+                        cap(color, pink),
+                        stalk_above_ring(color, white),
+                        stalk_below_ring(color, white).
+
+mushroom_is(edible) :-  positive(bruises, presence, visible),
+                    stalk_root(shape, bulbous),
+                    cap(surface, smooth),
+                    gills(spacing, close),
+                    rings(number, two),
+                    cap(shape, flat),
+                    cap(color, pink),
+                    stalk_above_ring(color, white),
+                    \+stalk_below_ring(color, white).
+
 stalk_root(X, Y) :- positive(stalk_root, X, Y).
 
 gills(X, Y) :- positive(gills, X, Y).
@@ -140,22 +337,19 @@ negative(X, Y, Z) :- \+xpositive(X, Y, Z), ask(X, Y, Z, no).
 
 other_match_exists(X, Y, Z) :- xpositive(X, Y, W), Z \= W, !.
 
-replace_underscores(X, X) :- re_replace("_", " ", X, X), !.
-replace_underscores(X, Y) :- re_replace("_", " ", X, X1), replace_underscores(X1, Y).
-
 ask(X, Y, Z, yes) :- !, 
-                     replace_underscores(X, X1),
-                     replace_underscores(Y, Y1),
-                     replace_underscores(Z, Z1),
-                     format('Is the ~w of ~w ~w? (y/n)~n', [Y1, X1, Z1]),
-                     read(Reply),
-                     memorize(X, Y, Z, Reply),
-                     (Reply = 'y').
+                    re_replace("_"/g, " ", X, X1),
+                    re_replace("_"/g, " ", Y, Y1),
+                    re_replace("_"/g, " ", Z, Z1),
+                    format('Is the ~w of ~w ~w? (y/n)~n', [Y1, X1, Z1]),
+                    read(Reply),
+                    memorize(X, Y, Z, Reply),
+                    (Reply = 'y').
 
 ask(X, Y, Z, no) :- !,
-                    replace_underscores(X, X1),
-                    replace_underscores(Y, Y1),
-                    replace_underscores(Z, Z1),
+                    re_replace("_"/g, " ", X, X1),
+                    re_replace("_"/g, " ", Y, Y1),
+                    re_replace("_"/g, " ", Z, Z1),
                     format('Is the ~w of ~w ~w? (y/n)~n', [Y1, X1, Z1]),
                     read(Reply),
                     memorize(X, Y, Z, Reply),
