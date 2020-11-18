@@ -1,10 +1,6 @@
 :- dynamic
-    xpositive/3,
-    xnegative/3.
-
-mushroom_is(edible) :- positive(bruises, presence, visible),
-                       \+stalk_root(shape, bulbous),
-                       \+stalk_root(shape, equal).
+   xpositive/3,
+   xnegative/3.
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                         gills(spacing, crowded),
@@ -114,6 +110,10 @@ mushroom_is(edible) :- negative(bruises, presence, visible),
                        veil(color, white),
                        stalk_root(shape, equal),
                        cap(surface, fibrous).
+
+mushroom_is(edible) :- positive(bruises, presence, visible),
+                       \+stalk_root(shape, bulbous),
+                       \+stalk_root(shape, equal).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, equal),
