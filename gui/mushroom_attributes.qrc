@@ -1,0 +1,38 @@
+<RCC>
+  <qresource prefix="cap-shape-flat">
+    <file>../img/cap-shape-flat.png</file>
+  </qresource>
+  <qresource prefix="cap-shape-bell">
+    <file>../img/cap-shape-bell.png</file>
+  </qresource>
+  <qresource prefix="cap-shape-convex">
+    <file>../img/cap-shape-convex.png</file>
+  </qresource>
+  <qresource prefix="cap-shape-conical">
+    <file>../img/cap-shape-conical.png</file>
+  </qresource>
+  <qresource prefix="cap-surface-scaly">
+    <file>../img/cap-sufrce-scaly.png</file>
+  </qresource>
+  <qresource prefix="cap-surface-smooth">
+    <file>../img/cap-surface-smooth.png</file>
+  </qresource>
+  <qresource prefix="cap-surface-fibrous">
+    <file>../img/cap-surface-fibrous.png</file>
+  </qresource>
+  <qresource prefix="stalk-root-bulbous">
+    <file>../img/stalk-root-bulbous.png</file>
+  </qresource>
+  <qresource prefix="stalk-root-club">
+    <file>../img/stalk-root-club.png</file>
+  </qresource>
+  <qresource prefix="stalk-root-equal">
+    <file>../img/stalk-root-equal.png</file>
+  </qresource>
+  <qresource prefix="gill-spacing-close">
+    <file>../img/gill-spacing-close.png</file>
+  </qresource>
+  <qresource prefix="gill-spacing-crowded">
+    <file>../img/gill-spacing-crowded.png</file>
+  </qresource>
+</RCC>
