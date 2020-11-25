@@ -3,8 +3,8 @@
    xnegative/3.
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
-                        gills(spacing, crowded),
-                        stalk_root(shape, equal).
+                       gills(spacing, crowded),
+                       stalk_root(shape, equal).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, crowded),
@@ -47,7 +47,6 @@ mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, close),
                        veil(color, orange).
 
-% TODO: double-check
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, close),
                        veil(color, yellow).
