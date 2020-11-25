@@ -341,7 +341,6 @@ veil(X, Y) :- positive(veil, X, Y).
 
 cap(X, Y) :- positive(cap, X, Y).
 
-% TODO: double check if positive/3 & negative/3 both work as intended
 positive(X, Y, Z) :- xpositive(X, Y, Z), !.
 positive(X, Y, Z) :- \+xnegative(X, Y, Z),
                      \+other_match_exists(X, Y, Z),
