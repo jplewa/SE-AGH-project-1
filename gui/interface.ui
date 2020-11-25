@@ -40,7 +40,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>135</y>
+      <y>215</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -54,6 +54,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_shape_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -61,6 +64,9 @@ color: black;</string>
        <property name="text">
         <string>bell</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_shape_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -68,6 +74,9 @@ color: black;</string>
        <property name="text">
         <string>convex</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_shape_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -75,6 +84,9 @@ color: black;</string>
        <property name="text">
         <string>conical</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_shape_group</string>
+       </attribute>
       </widget>
      </item>
     </layout>
@@ -83,7 +95,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>115</y>
+      <y>195</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -96,7 +108,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>135</y>
+      <y>215</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -112,7 +124,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>185</y>
+      <y>265</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -125,7 +137,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>205</y>
+      <y>285</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -139,6 +151,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_surface_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -146,6 +161,9 @@ color: black;</string>
        <property name="text">
         <string>smooth</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_surface_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -153,6 +171,9 @@ color: black;</string>
        <property name="text">
         <string>fibrous</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_surface_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -168,7 +189,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>205</y>
+      <y>285</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -184,7 +205,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>395</y>
+      <y>400</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -197,7 +218,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>415</y>
+      <y>420</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -211,6 +232,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_root_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -218,6 +242,9 @@ color: black;</string>
        <property name="text">
         <string>club</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_root_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -225,6 +252,9 @@ color: black;</string>
        <property name="text">
         <string>equal</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_root_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -240,7 +270,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>415</y>
+      <y>420</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -256,7 +286,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>605</y>
+      <y>610</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -269,7 +299,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>625</y>
+      <y>630</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -283,6 +313,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">gill_spacing_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -290,6 +323,9 @@ color: black;</string>
        <property name="text">
         <string>crowded</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">gill_spacing_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -312,7 +348,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>625</y>
+      <y>630</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -328,7 +364,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>255</y>
+      <y>335</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -341,7 +377,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>275</y>
+      <y>355</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -355,6 +391,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -362,6 +401,9 @@ color: black;</string>
        <property name="text">
         <string>pink</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -369,6 +411,9 @@ color: black;</string>
        <property name="text">
         <string>brown</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">cap_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -384,7 +429,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>625</y>
+      <y>630</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -400,7 +445,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>325</y>
+      <y>125</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -413,27 +458,36 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>345</y>
+      <y>145</y>
       <width>611</width>
       <height>31</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="bruises_layout">
      <item>
+      <widget class="QRadioButton" name="bruises_false">
+       <property name="text">
+        <string>false</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">bruises_group</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
       <widget class="QRadioButton" name="bruises_true">
        <property name="text">
         <string>true</string>
        </property>
        <property name="checked">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="bruises_false">
-       <property name="text">
-        <string>false</string>
-       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">bruises_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -456,7 +510,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>135</y>
+      <y>215</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -472,7 +526,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>465</y>
+      <y>470</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -485,7 +539,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>485</y>
+      <y>490</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -499,13 +553,19 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_color_above_ring_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="stalk_color_above_wing_red">
+      <widget class="QRadioButton" name="stalk_color_above_ring_red">
        <property name="text">
         <string>red</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_color_above_ring_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -528,7 +588,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>415</y>
+      <y>420</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -544,7 +604,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>535</y>
+      <y>540</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -557,7 +617,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>555</y>
+      <y>560</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -571,6 +631,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_color_below_ring_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -578,6 +641,9 @@ color: black;</string>
        <property name="text">
         <string>red</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">stalk_color_below_ring_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -600,7 +666,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>205</y>
+      <y>285</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -616,7 +682,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>675</y>
+      <y>680</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -629,7 +695,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>695</y>
+      <y>700</y>
       <width>611</width>
       <height>31</height>
      </rect>
@@ -643,6 +709,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">ring_number_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -650,6 +719,9 @@ color: black;</string>
        <property name="text">
         <string>one</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">ring_number_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -657,6 +729,9 @@ color: black;</string>
        <property name="text">
         <string>two</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">ring_number_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -672,7 +747,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>745</y>
+      <y>750</y>
       <width>611</width>
       <height>16</height>
      </rect>
@@ -685,12 +760,12 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>765</y>
+      <y>770</y>
       <width>611</width>
       <height>31</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="vail_color_layout">
+    <layout class="QHBoxLayout" name="veil_color_layout">
      <item>
       <widget class="QRadioButton" name="veil_color_white">
        <property name="text">
@@ -699,6 +774,9 @@ color: black;</string>
        <property name="checked">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">veil_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -706,6 +784,9 @@ color: black;</string>
        <property name="text">
         <string>yellow</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">veil_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -713,6 +794,9 @@ color: black;</string>
        <property name="text">
         <string>orange</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">veil_color_group</string>
+       </attribute>
       </widget>
      </item>
      <item>
@@ -720,6 +804,9 @@ color: black;</string>
        <property name="text">
         <string>brown</string>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">veil_color_group</string>
+       </attribute>
       </widget>
      </item>
     </layout>
@@ -728,7 +815,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>205</y>
+      <y>285</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -744,7 +831,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>415</y>
+      <y>420</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -760,7 +847,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>640</x>
-      <y>135</y>
+      <y>215</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -776,7 +863,7 @@ color: black;</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>135</y>
+      <y>215</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -791,8 +878,8 @@ color: black;</string>
    <widget class="QPushButton" name="is_edible_button">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>825</y>
+      <x>320</x>
+      <y>810</y>
       <width>181</width>
       <height>32</height>
      </rect>
@@ -802,6 +889,15 @@ color: black;</string>
     </property>
     <property name="text">
      <string>Is this mushroom edible?</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -823,14 +919,39 @@ color: black;</string>
    <widget class="QLabel" name="label_36">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>100</y>
-      <width>611</width>
-      <height>16</height>
+      <x>170</x>
+      <y>125</y>
+      <width>551</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#595959;&quot;&gt;SELECT AN OPTION FOR EACH ATTRIBUTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#595959;&quot;&gt;MANDATORY FIELD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="is_edible_button_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>110</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(211,211,211);</string>
+    </property>
+    <property name="text">
+     <string>Clear selected</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
@@ -849,4 +970,16 @@ color: black;</string>
   <include location="../qt/mushroom_attributes.qrc"/>
  </resources>
  <connections/>
+ <buttongroups>
+  <buttongroup name="bruises_group"/>
+  <buttongroup name="cap_shape_group"/>
+  <buttongroup name="cap_surface_group"/>
+  <buttongroup name="cap_color_group"/>
+  <buttongroup name="stalk_root_group"/>
+  <buttongroup name="stalk_color_above_ring_group"/>
+  <buttongroup name="stalk_color_below_ring_group"/>
+  <buttongroup name="gill_spacing_group"/>
+  <buttongroup name="ring_number_group"/>
+  <buttongroup name="veil_color_group"/>
+ </buttongroups>
 </ui>
