@@ -25,13 +25,7 @@ mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, crowded),
                           stalk_root(shape, bulbous),
                           stalk_below_ring(color, white),
-                          rings(number, none).
-
-mushroom_is(poisonous) :- negative(bruises, presence, visible),
-                          gills(spacing, crowded),
-                          stalk_root(shape, bulbous),
-                          stalk_below_ring(color, white),
-                          rings(number, one).
+                          rings(number, at_most_one).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, crowded),
@@ -73,24 +67,21 @@ mushroom_is(edible) :- negative(bruises, presence, visible),
                        veil(color, white),
                        stalk_root(shape, bulbous),
                        rings(number, one),
-                       cap(color, white),
-                       cap(surface, scaly).
+                       cap(appearance, white_and_scaly).
 
 mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, close),
                           veil(color, white),
                           stalk_root(shape, bulbous),
                           rings(number, one),
-                          cap(color, white),
-                          cap(surface, fibrous).
+                          cap(appearance, white_and_fibrous).
 
 mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, close),
                           veil(color, white),
                           stalk_root(shape, bulbous),
                           rings(number, one),
-                          cap(color, white),
-                          cap(surface, smooth).
+                          cap(appearance, white_and_smooth).
 
 mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, close),
@@ -119,11 +110,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, equal),
-                          rings(number, none).
-
-mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, equal),
-                          rings(number, one).
+                          rings(number, at_most_one).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
@@ -148,80 +135,57 @@ mushroom_is(poisonous) :- positive(bruises, presence, visible),
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, scaly),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, white).
+                          cap(appearance, white_and_flat_and_scaly).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, brown),
+                       cap(appearance, brown_and_flat_and_scaly),
                        stalk_above_ring(color, red).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, pink),
+                       cap(appearance, pink_and_flat_and_scaly),
                        stalk_above_ring(color, red).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, brown),
-                       stalk_above_ring(color, white),
-                       stalk_below_ring(color, red).
+                       cap(appearance, brown_and_flat_and_scaly),
+                       stalk(color, white_and_red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, bulbous),
-                          cap(surface, scaly),
+                          stalk(appearance, white_and_bulbous),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, brown),
-                          stalk_above_ring(color, white),
-                          stalk_below_ring(color, white).
+                          cap(appearance, brown_and_flat_and_scaly).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, pink),
-                       stalk_above_ring(color, white),
-                       stalk_below_ring(color, red).
+                       cap(appearance, pink_and_flat_and_scaly),
+                       stalk(color, white_and_red).
+
+mushroom_is(poisonous) :- positive(bruises, presence, visible),
+                          stalk(appearance, white_and_bulbous),
+                          cap(appearance, pink_and_flat_and_scaly),
+                          rings(number, two).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, scaly),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, pink),
-                          stalk_above_ring(color, white),
-                          stalk_below_ring(color, white).
-
-mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, bulbous),
-                          cap(surface, scaly),
-                          rings(number, two),
-                          cap(shape, bell).
+                          cap(appearance, bell_and_scaly).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, convex).
+                       cap(appearance, convex_and_scaly).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
                        rings(number, two),
-                       cap(shape, conical).
+                       cap(appearance, conical_and_scaly).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
@@ -232,112 +196,147 @@ mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
                           cap(surface, smooth),
                           gills(spacing, close),
-                          rings(number, none).
-
-mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, bulbous),
-                          cap(surface, smooth),
-                          gills(spacing, close),
-                          rings(number, one).
+                          rings(number, at_most_one).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, convex).
+                       cap(appearance, convex_and_smooth).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, conical).
+                       cap(appearance, conical_and_smooth).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, smooth),
                           gills(spacing, close),
                           rings(number, two),
-                          cap(shape, bell).
+                          cap(appearance, bell_and_smooth).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, smooth),
                           gills(spacing, close),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, white).
+                          cap(appearance, white_and_flat_and_smooth).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, brown),
+                       cap(appearance, brown_and_flat_and_smooth),
                        stalk_above_ring(color, red).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, brown),
-                       stalk_above_ring(color, white),
-                       stalk_below_ring(color, red).
+                       cap(appearance, brown_and_flat_and_smooth),
+                       stalk(color, white_and_red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, bulbous),
-                          cap(surface, smooth),
+                          stalk(appearance, white_and_bulbous),
                           gills(spacing, close),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, brown),
-                          stalk_above_ring(color, white),
-                          stalk_below_ring(color, white).
+                          cap(appearance, brown_and_flat_and_smooth).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, pink),
+                       cap(appearance, pink_and_flat_and_smooth),
                        stalk_above_ring(color, red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
-                          stalk_root(shape, bulbous),
-                          cap(surface, smooth),
+                          stalk(appearance, white_and_bulbous),
                           gills(spacing, close),
                           rings(number, two),
-                          cap(shape, flat),
-                          cap(color, pink),
-                          stalk_above_ring(color, white),
-                          stalk_below_ring(color, white).
+                          cap(appearance, pink_and_flat_and_smooth).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
                        gills(spacing, close),
                        rings(number, two),
-                       cap(shape, flat),
-                       cap(color, pink),
-                       stalk_above_ring(color, white),
-                       stalk_below_ring(color, red).
-
-stalk_root(X, Y) :- positive(stalk_root, X, Y).
+                       cap(appearance, pink_and_flat_and_smooth),
+                       stalk(color, white_and_red).
 
 gills(X, Y) :- positive(gills, X, Y).
+
+stalk_root(X, Y) :- positive(stalk_root, X, Y).
 
 stalk_above_ring(X, Y) :- positive(stalk_above_ring, X, Y).
 
 stalk_below_ring(X, Y) :- positive(stalk_below_ring, X, Y).
 
+stalk(appearance, white_and_bulbous) :- stalk(color, white),
+                                        stalk_root(shape, bulbous).
+
+stalk(color, white_and_red) :- stalk_above_ring(color, white),
+                               stalk_below_ring(color, red).
+
+stalk(X, Y) :- stalk_above_ring(X, Y), stalk_below_ring(X, Y).
+
+rings(number, at_most_one) :- rings(number, none), rings(number, one).
+
 rings(X, Y) :- positive(rings, X, Y).
 
 veil(X, Y) :- positive(veil, X, Y).
+
+cap(appearance, white_and_flat) :- cap(color, white),
+                                   cap(shape, flat).
+
+cap(appearance, white_and_smooth) :- cap(color, white),
+                                     cap(surface, smooth).
+
+cap(appearance, white_and_scaly) :- cap(color, white),
+                                    cap(surface, scaly).
+
+cap(appearance, white_and_fibrous) :- cap(color, white),
+                                      cap(surface, fibrous).
+
+cap(appearance, white_and_flat_and_smooth) :- cap(appearance, white_and_flat),
+                                              cap(surface, smooth).
+
+cap(appearance, white_and_flat_and_scaly) :- cap(appearance, white_and_flat),
+                                             cap(surface, scaly).
+
+cap(appearance, pink_and_flat) :- cap(color, pink),
+                                  cap(shape, flat).
+
+cap(appearance, pink_and_flat_and_smooth) :- cap(appearance, pink_and_flat),
+                                             cap(surface, smooth).
+
+cap(appearance, pink_and_flat_and_scaly) :- cap(appearance, pink_and_flat),
+                                            cap(surface, scaly).
+
+cap(appearance, brown_and_flat) :- cap(color, brown),
+                                   cap(shape, flat).
+
+cap(appearance, brown_and_flat_and_smooth) :- cap(appearance, brown_and_flat),
+                                              cap(surface, smooth).
+
+cap(appearance, brown_and_flat_and_scaly) :- cap(appearance, brown_and_flat),
+                                             cap(surface, scaly).
+
+cap(appearance, convex_and_smooth) :- cap(shape, convex),
+                                      cap(surface, smooth).
+
+cap(appearance, convex_and_scaly) :- cap(shape, convex),
+                                     cap(surface, scaly).
+
+cap(appearance, conical_and_smooth) :- cap(shape, conical),
+                                       cap(surface, smooth).
+
+cap(appearance, conical_and_scaly) :- cap(shape, conical),
+                                      cap(surface, scaly).
+
+cap(appearance, bell_and_smooth) :- cap(shape, bell),
+                                    cap(surface, smooth).
+
+cap(appearance, bell_and_scaly) :- cap(shape, bell),
+                                   cap(surface, scaly).
 
 cap(X, Y) :- positive(cap, X, Y).
 
