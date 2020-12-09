@@ -87,19 +87,19 @@ mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, close),
                           veil(color, white),
                           stalk_root(shape, equal),
-                          cap(surface, scaly).
+                          cap_surface(scaly).
 
 mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, close),
                           veil(color, white),
                           stalk_root(shape, equal),
-                          cap(surface, smooth).
+                          cap_surface(smooth).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, close),
                        veil(color, white),
                        stalk_root(shape, equal),
-                       cap(surface, fibrous).
+                       cap_surface(fibrous).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, club).
@@ -114,22 +114,22 @@ mushroom_is(poisonous) :- positive(bruises, presence, visible),
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, fibrous).
+                       cap_surface(fibrous).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
+                       cap_surface(scaly),
                        rings(number, none).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, scaly),
+                       cap_surface(scaly),
                        rings(number, one),
                        gills(spacing, close).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, scaly),
+                          cap_surface(scaly),
                           rings(number, one),
                           gills(spacing, crowded).
 
@@ -189,12 +189,12 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
-                       cap(surface, smooth),
+                       cap_surface(smooth),
                        gills(spacing, crowded).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
-                          cap(surface, smooth),
+                          cap_surface(smooth),
                           gills(spacing, close),
                           rings(number, at_most_one).
 
@@ -284,61 +284,65 @@ rings(X, Y) :- positive(rings, X, Y).
 
 veil(X, Y) :- positive(veil, X, Y).
 
-cap(appearance, white_and_flat) :- cap(color, white),
-                                   cap(shape, flat).
+cap_shape(Y) :- positive(cap, shape, Y).
 
-cap(appearance, white_and_smooth) :- cap(color, white),
-                                     cap(surface, smooth).
+cap_color(Y) :- positive(cap, color, Y).
 
-cap(appearance, white_and_scaly) :- cap(color, white),
-                                    cap(surface, scaly).
+cap_surface(Y) :- positive(cap, surface, Y).
 
-cap(appearance, white_and_fibrous) :- cap(color, white),
-                                      cap(surface, fibrous).
+cap(appearance, white_and_flat) :- cap_color(white),
+                                   cap_shape(flat).
+
+cap(appearance, white_and_smooth) :- cap_color(white),
+                                     cap_surface(smooth).
+
+cap(appearance, white_and_scaly) :- cap_color(white),
+                                    cap_surface(scaly).
+
+cap(appearance, white_and_fibrous) :- cap_color(white),
+                                      cap_surface(fibrous).
 
 cap(appearance, white_and_flat_and_smooth) :- cap(appearance, white_and_flat),
-                                              cap(surface, smooth).
+                                              cap_surface(smooth).
 
 cap(appearance, white_and_flat_and_scaly) :- cap(appearance, white_and_flat),
-                                             cap(surface, scaly).
+                                             cap_surface(scaly).
 
-cap(appearance, pink_and_flat) :- cap(color, pink),
-                                  cap(shape, flat).
+cap(appearance, pink_and_flat) :- cap_color(pink),
+                                  cap_shape(flat).
 
 cap(appearance, pink_and_flat_and_smooth) :- cap(appearance, pink_and_flat),
-                                             cap(surface, smooth).
+                                             cap_surface(smooth).
 
 cap(appearance, pink_and_flat_and_scaly) :- cap(appearance, pink_and_flat),
-                                            cap(surface, scaly).
+                                            cap_surface(scaly).
 
-cap(appearance, brown_and_flat) :- cap(color, brown),
-                                   cap(shape, flat).
+cap(appearance, brown_and_flat) :- cap_color(brown),
+                                   cap_shape(flat).
 
 cap(appearance, brown_and_flat_and_smooth) :- cap(appearance, brown_and_flat),
-                                              cap(surface, smooth).
+                                              cap_surface(smooth).
 
 cap(appearance, brown_and_flat_and_scaly) :- cap(appearance, brown_and_flat),
-                                             cap(surface, scaly).
+                                             cap_surface(scaly).
 
-cap(appearance, convex_and_smooth) :- cap(shape, convex),
-                                      cap(surface, smooth).
+cap(appearance, convex_and_smooth) :- cap_shape(convex),
+                                      cap_surface(smooth).
 
-cap(appearance, convex_and_scaly) :- cap(shape, convex),
-                                     cap(surface, scaly).
+cap(appearance, convex_and_scaly) :- cap_shape(convex),
+                                     cap_surface(scaly).
 
-cap(appearance, conical_and_smooth) :- cap(shape, conical),
-                                       cap(surface, smooth).
+cap(appearance, conical_and_smooth) :- cap_shape(conical),
+                                       cap_surface(smooth).
 
-cap(appearance, conical_and_scaly) :- cap(shape, conical),
-                                      cap(surface, scaly).
+cap(appearance, conical_and_scaly) :- cap_shape(conical),
+                                      cap_surface(scaly).
 
-cap(appearance, bell_and_smooth) :- cap(shape, bell),
-                                    cap(surface, smooth).
+cap(appearance, bell_and_smooth) :- cap_shape(bell),
+                                    cap_surface(smooth).
 
-cap(appearance, bell_and_scaly) :- cap(shape, bell),
-                                   cap(surface, scaly).
-
-cap(X, Y) :- positive(cap, X, Y).
+cap(appearance, bell_and_scaly) :- cap_shape(bell),
+                                   cap_surface(scaly).
 
 positive(X, Y, Z) :- xpositive(X, Y, Z), !.
 positive(X, Y, Z) :- \+xnegative(X, Y, Z),
