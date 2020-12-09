@@ -279,7 +279,9 @@ stalk_color(white) :- stalk_color(white, white).
 
 stalk_color(X1, X2) :- stalk_above_ring(color, X1), stalk_below_ring(color, X2).
 
-rings(number, at_most_one) :- rings(number, none), rings(number, one).
+rings(number, at_most_one) :- rings(number, none).
+
+rings(number, at_most_one) :- rings(number, one).
 
 rings(X, Y) :- positive(rings, X, Y).
 
