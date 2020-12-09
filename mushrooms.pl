@@ -25,7 +25,7 @@ mushroom_is(poisonous) :- negative(bruises, presence, visible),
                           gills(spacing, crowded),
                           stalk_root(shape, bulbous),
                           stalk_below_ring(color, white),
-                          rings(number, at_most_one).
+                          ring_number(at_most_one).
 
 mushroom_is(edible) :- negative(bruises, presence, visible),
                        gills(spacing, crowded),
@@ -110,7 +110,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, equal),
-                          rings(number, at_most_one).
+                          ring_number(at_most_one).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
@@ -196,7 +196,7 @@ mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk_root(shape, bulbous),
                           cap_surface(smooth),
                           gills(spacing, close),
-                          rings(number, at_most_one).
+                          ring_number(at_most_one).
 
 mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
@@ -279,9 +279,9 @@ stalk_color(white) :- stalk_color(white, white).
 
 stalk_color(X1, X2) :- stalk_above_ring(color, X1), stalk_below_ring(color, X2).
 
-rings(number, at_most_one) :- rings(number, none).
+ring_number(at_most_one) :- rings(number, none).
 
-rings(number, at_most_one) :- rings(number, one).
+ring_number(at_most_one) :- rings(number, one).
 
 rings(X, Y) :- positive(rings, X, Y).
 
