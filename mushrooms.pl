@@ -154,7 +154,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
                        rings(number, two),
                        cap(appearance, brown_and_flat_and_scaly),
-                       stalk(color, white_and_red).
+                       stalk_color(white_and_red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk(appearance, white_and_bulbous),
@@ -165,7 +165,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        stalk_root(shape, bulbous),
                        rings(number, two),
                        cap(appearance, pink_and_flat_and_scaly),
-                       stalk(color, white_and_red).
+                       stalk_color(white_and_red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk(appearance, white_and_bulbous),
@@ -234,7 +234,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        gills(spacing, close),
                        rings(number, two),
                        cap(appearance, brown_and_flat_and_smooth),
-                       stalk(color, white_and_red).
+                       stalk_color(white_and_red).
 
 mushroom_is(poisonous) :- positive(bruises, presence, visible),
                           stalk(appearance, white_and_bulbous),
@@ -260,7 +260,7 @@ mushroom_is(edible) :- positive(bruises, presence, visible),
                        gills(spacing, close),
                        rings(number, two),
                        cap(appearance, pink_and_flat_and_smooth),
-                       stalk(color, white_and_red).
+                       stalk_color(white_and_red).
 
 gills(X, Y) :- positive(gills, X, Y).
 
@@ -270,13 +270,14 @@ stalk_above_ring(X, Y) :- positive(stalk_above_ring, X, Y).
 
 stalk_below_ring(X, Y) :- positive(stalk_below_ring, X, Y).
 
-stalk(appearance, white_and_bulbous) :- stalk(color, white),
+stalk(appearance, white_and_bulbous) :- stalk_color(white),
                                         stalk_root(shape, bulbous).
 
-stalk(color, white_and_red) :- stalk_above_ring(color, white),
-                               stalk_below_ring(color, red).
+stalk_color(white_and_red) :- stalk_color(white, red).
 
-stalk(X, Y) :- stalk_above_ring(X, Y), stalk_below_ring(X, Y).
+stalk_color(white) :- stalk_color(white, white).
+
+stalk_color(X1, X2) :- stalk_above_ring(color, X1), stalk_below_ring(color, X2).
 
 rings(number, at_most_one) :- rings(number, none), rings(number, one).
 
